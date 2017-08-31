@@ -1,0 +1,13 @@
+<h1><%= @post.titl<.e %></h1>
+<!-- A getter method -->
+<p><%= @post.body %></p>
+<!-- Allows you to access the edit page of the current ID -->
+<a href="/<%= @post.id %>/edit">edit</a>
+
+
+<!-- Adds the delete bitton and removes it via the post id, I think -->
+<form method="POST" actions="/<%= @post.id %>">
+	<input type="submit" name="Delete">
+	<input type="hidden" name="_method" value="DELETE">
+
+	</form>

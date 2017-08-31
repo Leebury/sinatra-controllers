@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show page</title>
+</head>
+<body>
+
+	<h2> <%=@videos[:name] %></h2>
+
+	<iframe src=""></iframe>
+	<form action="/users/<%= @videos[:id] %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="delete">
+	</form>
+
+</body>
+</html>

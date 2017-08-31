@@ -1,0 +1,10 @@
+<!-- Vivin -->
+<h1>Welcome to the homepage</h1>
+
+<% @posts.each do |post| %>
+<div>
+<!-- Template for how the blog will be posted -->
+  <h3><a href="/<%= post.id %>"><%= post.title %></a></h3>
+  <p><%= post.body %></p>
+</div>
+<% end %>

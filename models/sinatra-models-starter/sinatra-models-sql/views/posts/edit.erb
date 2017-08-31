@@ -1,0 +1,23 @@
+<h1> Create a new post </h1>
+
+<!-- Method is post related to the CRUD model
+The action creates a post that has the post.id Ruby code, making a new ID -->
+<form method="POST" action="/<%= @post.id %>">
+
+<!-- Method override to allow the code "to overrite the current post -->
+	<input type="hidden" name="_method" value="PUT">
+
+
+	<Label>Title</Label>
+<!-- 	Take the input and converts it to Ruby code and sets the title -->
+	<input type="text" name="title" value="<%= @post.title %>">
+
+
+	<label for="body">body</label>
+	<textarea name="body"></textarea>
+
+
+<!-- 	Kind of understand, the submit button posts -->
+	<input type="submit" value="New post">
+
+</form>
